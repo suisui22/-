@@ -15,36 +15,161 @@
   </div>
 
   <div id="mission-container">
-    <!-- 12個のミッション -->
+    <h2>★ メインミッション 1段階目</h2>
     <div class="mission" data-answer="光">
-      <p>Mission 1：闇を払う力の名は？</p>
+      <p>謎1：闇を払う光の名は？</p>
       <input type="text" class="answer" placeholder="答えを入力">
       <button class="check">判定</button>
       <p class="result"></p>
     </div>
-
     <div class="mission" data-answer="炎">
-      <p>Mission 2：情熱を象徴する元素は？</p>
+      <p>謎2：情熱を象徴する元素は？</p>
       <input type="text" class="answer" placeholder="答えを入力">
       <button class="check">判定</button>
       <p class="result"></p>
     </div>
-
     <div class="mission" data-answer="風">
-      <p>Mission 3：流れを生むものは？</p>
+      <p>謎3：流れを生むものは？</p>
       <input type="text" class="answer" placeholder="答えを入力">
       <button class="check">判定</button>
       <p class="result"></p>
     </div>
-
     <div class="mission" data-answer="水">
-      <p>Mission 4：命を潤すものは？（正解で動画再生）</p>
+      <p>謎4：命を潤すものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="土">
+      <p>謎5：大地の象徴は？</p>
       <input type="text" class="answer" placeholder="答えを入力">
       <button class="check">判定</button>
       <p class="result"></p>
     </div>
   </div>
 
+    <!-- 2段階目 -->
+  <div id="main-mission-2" class="hidden">
+    <h2>★ メインミッション 2段階目</h2>
+    <p id="story2-text">先程の冒険の結果…次のキーワードを入力してください。</p>
+    <input type="text" id="keyword2" placeholder="キーワード">
+    <button id="check2">判定</button>
+    <p id="result2"></p>
+  </div>
+
+  <!-- 3段階目 -->
+  <div id="main-mission-3" class="hidden">
+    <h2>★ メインミッション 3段階目</h2>
+    <p id="story3-text">新しい謎が現れました。キーワードを入力してください。</p>
+    <input type="text" id="keyword3" placeholder="キーワード">
+    <button id="check3">判定</button>
+    <p id="result3"></p>
+  </div>
+
+  <!-- 4段階目 -->
+  <div id="main-mission-4" class="hidden">
+    <h2>★ メインミッション 4段階目</h2>
+    <p id="story4-text">動画を確認しよう！キーワードを入力してください。</p>
+    <input type="text" id="keyword4" placeholder="キーワード">
+    <button id="check4">判定</button>
+    <p id="result4"></p>
+    <div id="video-container" class="hidden">
+      <video id="mission-video" width="640" controls>
+        <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+        お使いのブラウザは動画再生に対応していません。
+      </video>
+    </div>
+  </div>
+
+  <!-- 5段階目 -->
+  <div id="main-mission-5" class="hidden">
+    <h2>★ メインミッション 5段階目</h2>
+    <p id="story5-text">最後の挑戦！キーワードを入力してください。</p>
+    <input type="text" id="keyword5" placeholder="キーワード">
+    <button id="check5">判定</button>
+    <p id="result5"></p>
+  </div>
+</div>
+
+   <!-- 通常ミッション -->
+  <div id="mission-container">
+    <h2>通常ミッション</h2>
+    <!-- 12個のミッションをここに記載 -->
+    <div class="mission" data-answer="鍵">
+      <p>Mission 1：扉を開けるものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="魔法">
+      <p>Mission 2：異世界の力は？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="剣">
+      <p>Mission 3：勇者の武器は？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="盾">
+      <p>Mission 4：防御に使うものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="薬">
+      <p>Mission 5：体力回復に必要なものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="魔石">
+      <p>Mission 6：魔力の源は？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="書">
+      <p>Mission 7：知識を記すものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="宝">
+      <p>Mission 8：冒険者が求めるものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="地図">
+      <p>Mission 9：迷わないために必要なものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="指輪">
+      <p>Mission 10：魔力を封じるものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="杖">
+      <p>Mission 11：魔法使いの必須道具は？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+    <div class="mission" data-answer="宝石">
+      <p>Mission 12：魔力を増幅するものは？</p>
+      <input type="text" class="answer" placeholder="答えを入力">
+      <button class="check">判定</button>
+      <p class="result"></p>
+    </div>
+  </div>
+
+  <!-- 動画 -->
   <div id="video-container" class="hidden">
     <video id="mission-video" width="640" controls>
       <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
@@ -52,7 +177,10 @@
     </video>
   </div>
 
-  <a href="hint.html" target="_blank" id="hint-icon" title="ヒントを見る">💡</a>
+  <!-- ヒントアイコン -->
+   <!-- 💡ヒントアイコン -->
+  <a href="hint.html" class="hint-icon" target="_blank" title="ヒントを見る">💡</a>
+
 
   <script src="script.js"></script>
 </body>
