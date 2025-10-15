@@ -1,64 +1,90 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>魔法のミッション - メイン</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- 軽い魔法陣背景（SVG） -->
-  <svg class="bg-svg" viewBox="0 0 600 600" aria-hidden="true">
-    <defs>
-      <radialGradient id="g">
-        <stop offset="0%" stop-color="#c9b3ff" stop-opacity="0.7"/>
-        <stop offset="100%" stop-color="#6f52c8" stop-opacity="0.0"/>
-      </radialGradient>
-    </defs>
-    <circle cx="300" cy="300" r="280" fill="url(#g)"></circle>
-    <g stroke="#fff" stroke-opacity="0.06" fill="none" stroke-width="2">
-      <circle cx="300" cy="300" r="220"></circle>
-      <circle cx="300" cy="300" r="160"></circle>
-      <path d="M300 140 L300 460" />
-      <path d="M140 300 L460 300" />
-      <path d="M200 200 L400 400" />
-      <path d="M200 400 L400 200" />
-    </g>
-  </svg>
+body {
+  margin: 0;
+  font-family: 'Noto Serif JP', serif;
+  background: radial-gradient(circle at center, #0b0b0b 0%, #000000 100%);
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-  <header class="header">
-    <h1>魔法のミッション</h1>
-    <div id="totalScore" class="score">合計得点：0点</div>
-  </header>
+.magic-circle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: url('https://i.imgur.com/7WcQFvP.png') no-repeat center/contain;
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 0.25;
+  animation: rotate 40s linear infinite;
+  z-index: 0;
+}
 
-  <main class="container">
-    <!-- メインミッション（上部で目立つ） -->
-    <section id="mainMission" class="main-mission">
-      <div class="main-header">
-        <h2>★ メインミッション（上位挑戦）</h2>
-        <div id="stageBadge" class="stage-badge">Stage 1</div>
-      </div>
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
 
-      <!-- ステージ内容をここに挿入 -->
-      <div id="stageArea"></div>
-    </section>
+#story-container {
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+}
 
-    <!-- 通常ミッション（12問） -->
-    <section class="section">
-      <h2>通常ミッション</h2>
-      <div id="missionGrid" class="grid"></div>
-    </section>
+#mission-container {
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+}
 
-    <!-- ストーリー字幕ウィンドウ（ページ下部） -->
-    <section id="storyWindow" class="story-window" aria-live="polite">
-      <div id="storyText" class="story-text"></div>
-      <img id="storyImage" class="story-img" alt="" style="display:none">
-    </section>
-  </main>
+.mission {
+  background: rgba(255,255,255,0.1);
+  margin: 15px auto;
+  width: 80%;
+  padding: 15px;
+  border-radius: 10px;
+}
 
-  <!-- 右下に常時ヒントリンク -->
-  <a class="hint-btn" href="hint.html" target="_blank" rel="noopener noreferrer">🔮 ヒント</a>
+input.answer {
+  width: 50%;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 5px;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+button.check {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+#hint-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  transition: transform 0.3s;
+  z-index: 2;
+}
+
+#hint-icon:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+#video-container {
+  margin-top: 30px;
+}
