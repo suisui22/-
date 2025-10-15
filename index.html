@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>魔法のミッション - メイン</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 軽い魔法陣背景（SVG） -->
+  <svg class="bg-svg" viewBox="0 0 600 600" aria-hidden="true">
+    <defs>
+      <radialGradient id="g">
+        <stop offset="0%" stop-color="#c9b3ff" stop-opacity="0.7"/>
+        <stop offset="100%" stop-color="#6f52c8" stop-opacity="0.0"/>
+      </radialGradient>
+    </defs>
+    <circle cx="300" cy="300" r="280" fill="url(#g)"></circle>
+    <g stroke="#fff" stroke-opacity="0.06" fill="none" stroke-width="2">
+      <circle cx="300" cy="300" r="220"></circle>
+      <circle cx="300" cy="300" r="160"></circle>
+      <path d="M300 140 L300 460" />
+      <path d="M140 300 L460 300" />
+      <path d="M200 200 L400 400" />
+      <path d="M200 400 L400 200" />
+    </g>
+  </svg>
+
+  <header class="header">
+    <h1>魔法のミッション</h1>
+    <div id="totalScore" class="score">合計得点：0点</div>
+  </header>
+
+  <main class="container">
+    <!-- メインミッション（上部で目立つ） -->
+    <section id="mainMission" class="main-mission">
+      <div class="main-header">
+        <h2>★ メインミッション（上位挑戦）</h2>
+        <div id="stageBadge" class="stage-badge">Stage 1</div>
+      </div>
+
+      <!-- ステージ内容をここに挿入 -->
+      <div id="stageArea"></div>
+    </section>
+
+    <!-- 通常ミッション（12問） -->
+    <section class="section">
+      <h2>通常ミッション</h2>
+      <div id="missionGrid" class="grid"></div>
+    </section>
+
+    <!-- ストーリー字幕ウィンドウ（ページ下部） -->
+    <section id="storyWindow" class="story-window" aria-live="polite">
+      <div id="storyText" class="story-text"></div>
+      <img id="storyImage" class="story-img" alt="" style="display:none">
+    </section>
+  </main>
+
+  <!-- 右下に常時ヒントリンク -->
+  <a class="hint-btn" href="hint.html" target="_blank" rel="noopener noreferrer">🔮 ヒント</a>
+
+<script src="script.js"></script>
+</body>
+</html>
